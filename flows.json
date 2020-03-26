@@ -14,6 +14,27 @@
         "info": ""
     },
     {
+        "id": "661c6f15.22f73",
+        "type": "tab",
+        "label": "cosmic-interval-web-app",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "10b0e50.3e5ef1b",
+        "type": "tab",
+        "label": "green-thumb-web-app",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "24b13e4e.bf0d72",
+        "type": "tab",
+        "label": "off-n-on-web-app",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "5f562f66.a301e",
         "type": "tab",
         "label": "basic-cube-01",
@@ -28,13 +49,6 @@
         "info": ""
     },
     {
-        "id": "661c6f15.22f73",
-        "type": "tab",
-        "label": "cosmic-interval-web-app",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "3ccf45.71acf0bc",
         "type": "tab",
         "label": "cosmic-interval-cube",
@@ -42,16 +56,16 @@
         "info": ""
     },
     {
-        "id": "10b0e50.3e5ef1b",
+        "id": "b9284b03.2b47d8",
         "type": "tab",
-        "label": "green-thumb-web-app",
+        "label": "green-thumb-cube",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "b9284b03.2b47d8",
+        "id": "1cf61b7d.fa61f5",
         "type": "tab",
-        "label": "green-thumb-cube",
+        "label": "off-n-on-cube-01",
         "disabled": false,
         "info": ""
     },
@@ -367,6 +381,33 @@
         "cts": "none",
         "dsr": "none",
         "newline": "28",
+        "bin": "bin",
+        "out": "count",
+        "addchar": "",
+        "responsetimeout": "1000"
+    },
+    {
+        "id": "a8623046.22b66",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "/off-n-on/websocket",
+        "wholemsg": "false"
+    },
+    {
+        "id": "3ad4d5a9.d870ba",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/rfcomm4",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "24",
         "bin": "bin",
         "out": "count",
         "addchar": "",
@@ -1992,6 +2033,7 @@
         "z": "3f2da72f.995ab8",
         "name": "Settings Out",
         "links": [
+            "290b53a4.b3f6ac",
             "4f0ebafe.11e1f4",
             "6c15c07a.68169",
             "e4092162.21e0a",
@@ -2010,7 +2052,8 @@
             "3a74e83e.288018",
             "65c2a6ff.a7b8f8",
             "884f2a67.a812c8",
-            "d137cb84.e03f18"
+            "d137cb84.e03f18",
+            "ebca6f86.aeab8"
         ],
         "x": 1135,
         "y": 420,
@@ -2204,7 +2247,7 @@
         "fieldType": "msg",
         "format": "html",
         "syntax": "mustache",
-        "template": "<!-- Body HTML -->\n    <div class='container' width=\"100%\">\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/basic?name=01\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/basicYellow.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Basic 01</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/basic?name=02\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/basicYellow.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Basic 02</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/cosmic-interval?name=01\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/cosmicYellow.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Cosmic Interval 01</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/green-thumb?name=01\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/yellowThumb.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Green Thumb 01</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n    </div>",
+        "template": "<!-- Body HTML -->\n    <div class='container' width=\"100%\">\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/basic?name=01\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/basicYellow.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Basic 01</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/basic?name=02\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/basicYellow.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Basic 02</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/cosmic-interval?name=01\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/cosmicYellow.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Cosmic Interval 01</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/green-thumb?name=01\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/yellowThumb.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Green Thumb 01</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n        <div class='row vert-pad' >\n            <div class='col-md-12'>\n                <a class=\"btn jumbotron-button btn-block big-text bold-text\" width='80%' href=\"/off-n-on?name=01\" >\n                    <table width=\"100%\" alight=\"left\">\n                        <tr>\n                            <td width=\"30%\" align='center'> <img src=\"/img/yellowSwitch.png\" height=\"70px\"/></td>\n                            <td width=\"70%\" align=\"left\">Off-N-On 01</td>\n                        </tr>\n                    </table>\n                </a>\n            </div>\n        </div>\n    </div>",
         "output": "str",
         "x": 730,
         "y": 280,
@@ -3971,6 +4014,853 @@
         "name": "",
         "serial": "37952f18.e80af",
         "x": 760,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "1925877.8756879",
+        "type": "http in",
+        "z": "24b13e4e.bf0d72",
+        "name": "/off-n-on",
+        "url": "/off-n-on",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "37b43e25.f6e0d2"
+            ]
+        ]
+    },
+    {
+        "id": "37b43e25.f6e0d2",
+        "type": "function",
+        "z": "24b13e4e.bf0d72",
+        "name": "Set Name And Device Type",
+        "func": "msg.payload['script'] = {};\nmsg.payload['script']['name'] = msg.payload.name\nmsg.payload['script']['deviceType'] = 'off-n-on';\nmsg.payload['script']['project'] = global.get('project');\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "fb8a47e6.187db8"
+            ]
+        ]
+    },
+    {
+        "id": "a2ee1729.ede6a8",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "Set Title",
+        "field": "payload.title",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "Off-N-On {{{payload.script.name}}}",
+        "output": "str",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "706663cb.079a1c"
+            ]
+        ]
+    },
+    {
+        "id": "706663cb.079a1c",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "script.stripChartWidget",
+        "field": "payload.script.stripChartWidget",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// StripChart Widget\n        class StripChart\n        {\n           constructor(plotConfig) \n            {\n                this.plotConfig = plotConfig;\n                this.plotStartTime = new Date().getTime();\n                this.layout =\n                {\n                    showlegend  : true,\n                    legend      : { x: 0, y: 1.15},\n                    height      : plotConfig.height,\n                    width       : plotConfig.width,\n                    xaxis       :\n                    {\n                        title: 'Seconds since ' + new Date(this.plotStartTime).toLocaleString(),\n                    },\n                    yaxis:\n                    {\n                        title           : plotConfig.trace1Title,\n                        titlefont       : {color: plotConfig.trace1Color},\n                        tickfont        : {color:plotConfig.trace1Color},\n                        gridcolor       : plotConfig.trace1GridColor,\n                        zerolinecolor   : plotConfig.trace1GridColor,\n                        linecolor       : plotConfig.trace1GridColor,\n//                        range: [0, 2]\n        \n                    },\n                    yaxis2:\n                    {\n                        title           : plotConfig.trace2Title,\n                        titlefont       : {color: plotConfig.trace2Color},\n                        tickfont        : {color:plotConfig.trace2Color},\n                        gridcolor       : plotConfig.trace2GridColor,\n                        zerolinecolor   : plotConfig.trace2GridColor,\n                        linecolor       : plotConfig.trace2GridColor,\n                        overlaying: 'y',\n                        side: 'right',\n//                        range: [0, 2]\n                    },\n                    margin: \n                        {\n                            t: 30, //top margin\n        //                    l: 0, //left margin\n        //                    r: 0, //right margin\n        //                    b: 20 //bottom margin\n                        },\n                };\n                this.trace1 = \n                {\n                    x: [],\n                    y: [],\n                    name: plotConfig.trace1Title,\n                    yaxis: 'y1',\n                    type: 'scatter',\n                    mode: 'lines',\n                    line: {color: this.plotConfig.trace1Color}\n            \n                };\n                this.trace2 = \n                {\n                    x: [],\n                    y: [],\n                    name: plotConfig.trace2Title,\n                    yaxis: 'y2',\n                    type: 'scatter',\n                    mode: 'lines',\n                    line: {color: this.plotConfig.trace2Color}\n            \n                };\n            }\n            addTracePoints(trace1Pt, trace2Pt)\n            {\n                var now = (new Date().getTime() - this.plotStartTime) / 1000;\n                var plotBeginning = now - this.plotConfig.plotLength;\n                var removeDone = false;\n                while(!removeDone)\n                {\n                    if (this.trace1.x[0] < plotBeginning)\n                    {\n                        this.trace1.x.shift();\n                        this.trace1.y.shift();\n                        this.trace2.x.shift();\n                        this.trace2.y.shift();\n                    }\n                    else\n                    {\n                        removeDone = true;\n                    }\n                }\n        \n                this.trace1.x.push(now);\n                this.trace1.y.push(trace1Pt);\n                this.trace2.x.push(now);\n                this.trace2.y.push(trace2Pt);\n                Plotly.newPlot(this.plotConfig.htmlId, [this.trace1, this.trace2], this.layout);\n            }\n        }\n",
+        "output": "str",
+        "x": 680,
+        "y": 60,
+        "wires": [
+            [
+                "5ff6d51b.9d9a6c"
+            ]
+        ]
+    },
+    {
+        "id": "5ff6d51b.9d9a6c",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "script.global",
+        "field": "payload.script.global",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// Global Javascript\n        var plotConfig = \n        {\n            trace1Title : 'Power',\n            trace1Color : '#557a95',\n            trace1GridColor : '#beceda',\n            trace2Title : 'Current',\n            trace2Color : '#f2a31f',\n            plotLength  : 600,\n            width   : '',\n            height  :   '500',\n            htmlId  :   'historyStripChart'\n        };\n        var restfulDevice = \n        {\n            deviceType  : '{{{payload.script.deviceType}}}',\n            name        : '{{{payload.script.name}}}',\n            project     : '{{{payload.script.project}}}'\n        };\n        var mqttDevice = null;\n        var device = null;\n        let historyStripChart = new StripChart(plotConfig);\n        var nsamplesChanged = false;\n        var avgRmsOffsetChanged = false;\n        var adcTomAChanged = false;\n        var loopDelayChanged = false;\n \n        var archiveRequestList = [];\n        var archiveList = [];\n\n        useWebSockets(true);\n        function onDocumentReady()\n        {\n            $('#nsamplesButtonId').hide();\n            $('#avgRmsOffsetButtonId').hide();\n            $('#adcTomAButtonId').hide();\n            $('#loopDelayButtonId').hide();\n        }\n        function onWebSocketOpen()\n        {\n//            getArchive(24);\n        }\n        function onWebSocketClose()\n        {\n            \n        }\n        function onWebSocketMessage(msg)\n        {\n            switch(msg.topic)\n            {\n                case 'readings':\n                    if (msg.mqttDevice.name == restfulDevice.name)\n                    {\n                        heartbeat();\n                        device = msg.payload;\n                        mqttDevice = msg.mqttDevice;\n                        updateDmaReadings();\n                    }\n                    break;\n                case 'getArchiveValues':\n                    if (msg.userID == userID)\n                    {\n                        if ((msg.payload.device.deviceType == restfulDevice.deviceType) && (msg.payload.device.name == restfulDevice.name) )\n                            putArchiveValues(msg.payload);\n                    }\n                    break;\n                case 'getJwtToken':\n                    if (msg.userID == userID) loadJwtToken(msg);\n                    break;\n                case 'settingAcknowledge':\n                    if (msg.userID == userID)\n                    {\n                        if (msg.payload != 'Success!') acknowledgeDialog('Acknowledge', 'Setting', msg.payload);\n                    }\n                    break;\n                default:\n                // code block\n            }\n        }\n        function setScalarValue(settingValue, attrName)\n        {\n            var settingAttr = device[attrName];\n            if ( (settingAttr.alarm.limits.lolo <= settingValue) && (settingValue <= settingAttr.alarm.limits.hihi) )\n            {\n                settingAttr.value = settingValue;\n                var mqttMessage = \n                {\n                    topic   : mqttDevice.project + '/' +  mqttDevice.deviceType + '/' +  mqttDevice.name + '/setting',\n                    payload :  device\n                };\n                checkLogin(sendSettingToMqtt, mqttMessage);\n            } \n            else\n            {\n                acknowledgeDialog('Acknowledge', 'Error', 'Entry outside range! (' + settingAttr.alarm.limits.lolo.toString() + '-' + settingAttr.alarm.limits.hihi.toString() + ' ' + settingAttr.unit);\n            }\n        }\n        function nsamplesChange()\n        {\n            nsamplesChanged = true;\n            $('#nsamplesButtonId').show();\n        }\n        function avgRmsOffsetChange()\n        {\n            avgRmsOffsetChanged = true;\n            $('#avgRmsOffsetButtonId').show();\n        }\n        function adcTomAChange()\n        {\n            adcTomAChanged = true;\n            $('#adcTomAButtonId').show();\n        }\n        function loopDelayChange()\n        {\n            loopDelayChanged = true;\n            $('#loopDelayButtonId').show();\n        }\n        function nsamples()\n        {\n            $('#nsamplesButtonId').hide();\n            if (isNaN($('#nsamplesInputId').val()))\n            {\n                nsamplesChanged = false;\n                return;\n            }\n            setScalarValue(Number($('#nsamplesInputId').val()), 'nsamples');\n            nsamplesChanged = false;\n        }\n        function avgRmsOffset()\n        {\n            $('#avgRmsOffsetButtonId').hide();\n            if (isNaN($('#avgRmsOffsetInputId').val()))\n            {\n                avgRmsOffsetChanged = false;\n                return;\n            }\n            setScalarValue(Number($('#avgRmsOffsetInputId').val()), 'avgRmsOffset');\n            avgRmsOffsetChanged = false;\n        }\n        function adcTomA()\n        {\n            $('#adcTomAButtonId').hide();\n            if (isNaN($('#adcTomAInputId').val()))\n            {\n                adcTomAChanged = false;\n                return;\n            }\n            setScalarValue(Number($('#adcTomAInputId').val()), 'adcTomA');\n            adcTomAChanged = false;\n        }\n        function loopDelay()\n        {\n            $('#loopDelayButtonId').hide();\n            if (isNaN($('#loopDelayInputId').val()))\n            {\n                loopDelayChanged = false;\n                return;\n            }\n            setScalarValue(Number($('#loopDelayInputId').val()), 'loopDelay');\n            loopDelayChanged = false;\n        }\n",
+        "output": "str",
+        "x": 650,
+        "y": 100,
+        "wires": [
+            [
+                "6d987084.a40aa"
+            ]
+        ]
+    },
+    {
+        "id": "6d987084.a40aa",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "script.updateReadings",
+        "field": "payload.script.updateReadings",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// Update Readings Javascript\n        function updateDmaReadings()\n        {\n            $('#linkQualityId').text(device.linkQuality.value);\n            $('#signalLevelId').text(device.signalLevel.value);\n            $('#avgRmsId').text(device.avgRms.value);\n            $('#milliAmpsId').text(device.milliAmps.value);\n            $('#powerId').text(device.power.value);\n            $('#adcSampleRateId').text(device.adcSampleRate.value);\n            historyStripChart.addTracePoints(device.power.value, device.milliAmps.value);\n            if (!nsamplesChanged)$('#nsamplesInputId').val(device.nsamples.value);\n            if (!avgRmsOffsetChanged)$('#avgRmsOffsetInputId').val(device.avgRmsOffset.value);\n            if (!adcTomAChanged)$('#adcTomAInputId').val(device.adcTomA.value);\n            if (!loopDelayChanged)$('#loopDelayInputId').val(device.loopDelay.value);\n\n            buttonColor = '#ff0000';\n            buttonTextColor = '#000000';\n            buttonText = \"Off\";\n            if (device.powerOn.value > 0) \n            {\n                buttonColor = '#00ff00';\n                buttonText = 'On';\n            }\n            $('#powerOnButtonId').css('color', buttonTextColor); \n            $('#powerOnButtonId').css('background-color', buttonColor); \n            $('#powerOnButtonId').text(buttonText); \n        }\n",
+        "output": "str",
+        "x": 680,
+        "y": 140,
+        "wires": [
+            [
+                "75afce25.45603"
+            ]
+        ]
+    },
+    {
+        "id": "acd6c73d.c42048",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "script.editDevice",
+        "field": "payload.script.editDevice",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// Edit Temp JavaScript\n       $( function() \n        {\n            $( \"#editDeviceDialog\" ).dialog(\n                {\n//                    closeOnEscape: false,\n//                    open: function(event, ui) {$(\".ui-dialog-titlebar-close\", ui.dialog | ui).hide();},\n                    width:    640,\n                    autoOpen: false,\n                    buttons:\n                    [\n                        {\n                            text: \"Set\",\n                            click: function() {setDevice(); $( this ).dialog( \"close\" );},\n                            showText: false\n                        },\n                        {\n                            text: \"Cancel\",\n                            click: function() \n                            {\n                                $( this ).dialog( \"close\" ); \n                            },\n                            showText: false\n                        }\n                    ]\n                });\n        } );\n        function editDevice(attrName)\n        {\n            $( \"#editDeviceDialog\" ).dialog( \"option\", \"title\", \"Edit\"); \n            editedAttribute = attrName;\n            $( \"#editDeviceDialogAttribute\").html(attrName);\n\n            var attr = device[attrName];\n            $( \"#loloAlarm\").val(attr.alarm.limits.lolo);\n            $( \"#lowAlarm\").val(attr.alarm.limits.low);\n            $( \"#highAlarm\").val(attr.alarm.limits.high);\n            $( \"#hihiAlarm\").val(attr.alarm.limits.hihi);\n            $( \"#notifyName\").val(attr.alarm.notify.name);\n            $( \"#notifyNumber\").val(attr.alarm.notify.number);\n\n            $( \"#editDeviceDialog\" ).dialog( \"open\" );\n        }\n        function setDevice()\n        {\n            var attr = device[editedAttribute];\n            if (isNaN($('#loloAlarm').val()) \n                || isNaN($('#lowAlarm').val()) \n                || isNaN($('#highAlarm').val()) \n                || isNaN($('#hihiAlarm').val()))\n            {\n                acknowledgeDialog('Error', 'Entry not a number!', editedAttribute);\n                editedAttribute = '';\n                return;\n            }\n            editedAttribute = '';\n\n            attr.alarm.limits.lolo = Number($( \"#loloAlarm\").val());\n            attr.alarm.limits.low = Number($( \"#lowAlarm\").val());\n            attr.alarm.limits.high = Number($( \"#highAlarm\").val());\n            attr.alarm.limits.hihi = Number($( \"#hihiAlarm\").val());\n            attr.alarm.notify.number =  $( \"#notifyNumber\").val();\n            attr.alarm.notify.name = $( \"#notifyName\").val();\n            var mqttMessage = \n            {\n                topic   : mqttDevice.project + '/' +  mqttDevice.deviceType + '/' +  mqttDevice.name + '/setting',\n                payload :  device\n            };\n            checkLogin(sendSettingToMqtt, mqttMessage);\n        }\n",
+        "output": "str",
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "1addfc5d.361a04"
+            ]
+        ]
+    },
+    {
+        "id": "8da7689a.45d7e8",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "javascript",
+        "field": "payload.javascript",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "{{{payload.script.stripChartWidget}}}\n{{{payload.script.global}}}\n{{{payload.script.updateReadings}}}\n{{{payload.script.toggleButtons}}}\n{{{payload.script.archive}}}\n{{{payload.script.editDevice}}}\n{{{payload.script.dangerZone}}}\n",
+        "output": "str",
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "9c3ebae3.321fe8"
+            ]
+        ]
+    },
+    {
+        "id": "c47b99ca.4fd248",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "body",
+        "field": "payload.body",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "    <div width=\"100%\">\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12' align='center'>\n{{{payload.html.dashboard}}}\n            </div>\n        </div>\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12' align='center'>\n{{{payload.html.history}}}\n            </div>\n        </div>\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12'>\n{{{payload.html.wifimon}}}\n            </div>\n        </div>\n        <div class='row' style='padding-bottom: 25px;'>\n            <div class='col-md-12'>\n{{{payload.html.dangerZone}}}\n            </div>\n        </div>\n    </div>",
+        "output": "str",
+        "x": 950,
+        "y": 260,
+        "wires": [
+            [
+                "51b3d752.1fcbe8"
+            ]
+        ]
+    },
+    {
+        "id": "29b09cc1.aee1f4",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "html.wifimon",
+        "field": "payload.html.wifimon",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!-- Dashboard HTML -->\n                <div class='card'>\n                    <p class='card-title'>WiFi Connection</p>\n                    <div class='card-body' align=\"center\">\n                        <div class='row'  style='padding-top: 0px;'>\n                            <table width='100%'>\n                                <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Device Update</span>\n                                    </td>\n                                    <td width='20%' align='center'></td>\n                                    <td width='20%' align='center'>\n                                        <img src='/img/heartRed.png' id='heartBeatID' width='100px' height='100px'/>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Signal Level (dBm)</span>\n                                    </td>\n                                    <td width='20%' align='center'></td>\n                                    <td width='20%' align='center'>\n                                        <span class='card-text' id='signalLevelId' >-100</span>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Link Quality (/70)</span>\n                                    </td>\n                                    <td width='20%' align='center'></td>\n                                    <td width='20%' align='center'>\n                                        <span class='card-text' id='linkQualityId' >-1</span>\n                                    </td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n",
+        "output": "str",
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "7d2f899e.f4e8b8"
+            ]
+        ]
+    },
+    {
+        "id": "acde3682.7dac88",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "html.archive",
+        "field": "payload.html.archive",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!-- Archive HTML -->\n                <div class='card'>\n                    <p class='card-title'>Archive</p>\n                    <div class='card-body' align=\"center\">\n                        <div class='row' >\n                            <table width='100%'>\n                                <tr>\n                                    <td width='10%' align='center'>\n                                        <button class='btn btn-block big-text' style='background-color:var(--color1);color:var(--color5)' id=\"archive2hrButton\" onclick=\"getArchive(2)\" >2</button>\n                                    </td>\n                                    <td width='10%'  align='center'>\n                                        <button class='btn btn-block big-text' style='background-color:var(--color1);color:var(--color5)' id=\"archive4hrButton\" onclick=\"getArchive(4)\" >4</button>\n                                    </td>\n                                    <td width='10%'  align='center'>\n                                        <button class='btn btn-block big-text' style='background-color:var(--color1);color:var(--color5)' id=\"archive8hrButton\" onclick=\"getArchive(8)\" >8</button>\n                                    </td>\n                                    <td width='10%'  align='center'>\n                                        <button class='btn btn-block big-text' style='background-color:var(--color1);color:var(--color5)' id=\"archive24hrButton\" onclick=\"getArchive(24)\" >24</button>\n                                    </td>\n                                    <td width='10%' align='center'>\n                                        <button class='btn btn-block big-text' style='background-color:var(--color1);color:var(--color5)' id=\"archive72hrButton\" onclick=\"getArchive(72)\" >72</button>\n                                    </td>\n                                    <td width='10%' align='center'>\n                                        <button class='btn btn-block big-text' style='background-color:var(--color1);color:var(--color5)' id=\"archive168hrButton\" onclick=\"getArchive(168)\" >168</button>\n                                    </td>\n                                    <td width='10%' align='center'>\n                                        <span class='big-text' >Hours</span>\n                                    </td>\n                                </tr>\n                            </table>\n                        </div>\n                        <div class='row vert-pad'>\n                            <div class='col-md-12'>\n                                <div id=\"archiveChart\" width=\"100%\" ></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n",
+        "output": "str",
+        "x": 970,
+        "y": 140,
+        "wires": [
+            [
+                "29b09cc1.aee1f4"
+            ]
+        ]
+    },
+    {
+        "id": "4187d58a.90f2cc",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "html.history",
+        "field": "payload.html.history",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!-- History HTML -->\n                <div class='card'>\n                    <p class='card-title'>History</p>\n                    <div class='card-body' align=\"center\">\n                        <div id=\"historyStripChart\" width=\"100%\" ></div>\n                    </div>\n                </div>\n",
+        "output": "str",
+        "x": 970,
+        "y": 100,
+        "wires": [
+            [
+                "acde3682.7dac88"
+            ]
+        ]
+    },
+    {
+        "id": "9c3ebae3.321fe8",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "html.dashboard",
+        "field": "payload.html.dashboard",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!-- Dashboard HTML -->\n                <div class='card'>\n                    <p class='card-title'>Dashboard</p>\n                    <div class='card-body' align=\"center\">\n                        <div class='row' style='padding-bottom: 25px;'>\n                            <table width='100%'>\n                                 <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Power On/Off</span>\n                                    </td>\n                                    <td width='20%' align='center'>\n                                        <button class='btn btn-block big-text' style='background-color:grey;color:black' id='powerOnButtonId' onclick=\"powerOn()\" >?</button>\n                                    </td>\n                                    <td width='20%'>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Power (W)</span>\n                                    </td>\n                                    <td width='20%' align='center'>\n                                        <span class='card-text'  id='powerId' >-100</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' onclick=\"editDevice('power')\" >Edit</button>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Current (mA)</span>\n                                    </td>\n                                    <td width='20%' align='center'>\n                                        <span class='card-text'  id='milliAmpsId' >-100</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' onclick=\"editDevice('milliAmps')\" >Edit</button>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Avg RMS Count</span>\n                                    </td>\n                                    <td width='20%' align='center'>\n                                        <span class='card-text'  id='avgRmsId' >-100</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' onclick=\"editDevice('avgRms')\" >Edit</button>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%' >\n                                        <span class='card-text' >Sample Rate (kHz)</span>\n                                    </td>\n                                    <td width='20%' align='center'>\n                                        <span class='card-text'  id='adcSampleRateId' >-100</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' onclick=\"editDevice('adcSampleRate')\" >Edit</button>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%'>\n                                        <span class='card-text' >Filter Samples</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <input id=\"nsamplesInputId\" type=\"text\" value=\"0\" class=\"big-text\"  size=\"8\" oninput=\"nsamplesChange()\"/>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' id=\"nsamplesButtonId\" onclick=\"nsamples()\" >&#10003;</button>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%'>\n                                        <span class='card-text' >RMS Offset</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <input id=\"avgRmsOffsetInputId\" type=\"text\" value=\"0\" class=\"big-text\"  size=\"8\" oninput=\"avgRmsOffsetChange()\"/>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' id=\"avgRmsOffsetButtonId\" onclick=\"avgRmsOffset()\" >&#10003;</button>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%'>\n                                        <span class='card-text' >ADC Conversion</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <input id=\"adcTomAInputId\" type=\"text\" value=\"0\" class=\"big-text\"  size=\"8\" oninput=\"adcTomAChange()\"/>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' id=\"adcTomAButtonId\" onclick=\"adcTomA()\" >&#10003;</button>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td width='60%'>\n                                        <span class='card-text' >Loop Delay (mS)</span>\n                                    </td>\n                                    <td width='20%'>\n                                        <input id=\"loopDelayInputId\" type=\"text\" value=\"0\" class=\"big-text\"  size=\"8\" oninput=\"loopDelayChange()\"/>\n                                    </td>\n                                    <td width='20%'>\n                                        <button class='btn btn-block card-button big-text' id=\"loopDelayButtonId\" onclick=\"loopDelay()\" >&#10003;</button>\n                                    </td>\n                                </tr>\n                            </table>\n                        </div>\n                   </div>\n                </div>\n                <div id=\"editDeviceDialog\" title=\"Edit Device\" class='card'>\n                    <p class='card-title' id='editDeviceDialogAttribute'>Attribute</p>\n                    <div class='card-body'>\n                        <table>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">LoLo</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"loloAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">LOW</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"lowAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">HIGH</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"highAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">HiHi</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"hihiAlarm\" type=\"text\" value=\"0\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">Notify Name</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"notifyName\" type=\"text\" value=\"\" /></td>\n                            </tr>\n                            <tr>\n                                <td width=\"70%\" align=\"left\">  <span class=\"tableHeading tableText\">Notify Number</span></td>\n                                <td width=\"30%\" align=\"right\"><input class=\"form-control tableText\" id=\"notifyNumber\" type=\"text\" value=\"\" /></td>\n                            </tr>\n                        </table>\n                    </div>\n                </div>",
+        "output": "str",
+        "x": 980,
+        "y": 60,
+        "wires": [
+            [
+                "4187d58a.90f2cc"
+            ]
+        ]
+    },
+    {
+        "id": "a8cb20eb.3b77d",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "script.archive",
+        "field": "payload.script.archive",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// Archive JavaScript\n        function getArchive(hours)\n        { \n            if (hours > 2) messageDialog('Info', 'Wait', 'Getting Archive Data');\n            $('#archive2hrButton').attr(\"disabled\", true); \n            $('#archive4hrButton').attr(\"disabled\", true); \n            $('#archive8hrButton').attr(\"disabled\", true); \n            $('#archive24hrButton').attr(\"disabled\", true); \n            $('#archive72hrButton').attr(\"disabled\", true); \n            $('#archive168hrButton').attr(\"disabled\", true); \n            $('#archive2hrButton').css('color', 'var(--color5)'); \n            $('#archive2hrButton').css('background-color', 'var(--color1)'); \n            $('#archive4hrButton').css('color', 'var(--color5)'); \n            $('#archive4hrButton').css('background-color', 'var(--color1)'); \n            $('#archive8hrButton').css('color', 'var(--color5)'); \n            $('#archive8hrButton').css('background-color', 'var(--color1)'); \n            $('#archive24hrButton').css('color', 'var(--color5)'); \n            $('#archive24hrButton').css('background-color', 'var(--color1)'); \n            $('#archive72hrButton').css('color', 'var(--color5)'); \n            $('#archive72hrButton').css('background-color', 'var(--color1)'); \n            $('#archive168hrButton').css('color', 'var(--color5)'); \n            $('#archive168hrButton').css('background-color', 'var(--color1)'); \n            switch(hours)\n            {\n                case 2:\n                    $('#archive2hrButton').css('color', 'var(--color1)'); \n                    $('#archive2hrButton').css('background-color', 'var(--color5)'); \n                    break;\n                case 4:\n                    $('#archive4hrButton').css('color', 'var(--color1)'); \n                    $('#archive4hrButton').css('background-color', 'var(--color5)'); \n                    break;\n                case 8:\n                    $('#archive8hrButton').css('color', 'var(--color1)'); \n                    $('#archive8hrButton').css('background-color', 'var(--color5)'); \n                    break;\n                case 24:\n                    $('#archive24hrButton').css('color', 'var(--color1)'); \n                    $('#archive24hrButton').css('background-color', 'var(--color5)'); \n                    break;\n                case 72:\n                    $('#archive72hrButton').css('color', 'var(--color1)'); \n                    $('#archive72hrButton').css('background-color', 'var(--color5)'); \n                    break;\n                case 168:\n                    $('#archive168hrButton').css('color', 'var(--color1)'); \n                    $('#archive168hrButton').css('background-color', 'var(--color5)'); \n                    break;\n                default:\n                // code block\n            }\n\n            archiveRequestList = [];\n            archiveList = [];\n            var stopDate = new Date().getTime();\n            var startDate = stopDate - hours * 3600000;\n            archiveRequestList[0] = \n            {\n                deviceType : restfulDevice.deviceType,\n                name : restfulDevice.name, \n                attr : ['ledStateReading','ledStateSetting'],\n                startDate: startDate, \n                stopDate: stopDate,\n            };\n            getArchiveValues();\n        }\n        function getArchiveValues()\n        {\n            sendWebSocketMessageObject(\n                {\n                    topic       : 'getArchive',\n                    userID      : userID,\n                    device      : archiveRequestList[0],\n                 });\n            archiveRequestList.shift();\n            return;\n        }\n        function putArchiveValues(data)\n        {\n            archiveList.push(data);\n            if (archiveRequestList.length > 0)\n            {\n                getArchiveValues();\n            }\n            else\n            {\n                plotArchive();\n            }\n        }\n\n        function plotArchive()\n        {\n            $( \"#messageDialog\" ).dialog( \"close\" );\n            var layout =\n            {\n                showlegend  : true,\n                legend      : { x: 0, y: 1.15},\n                height      : '500',\n                width       : '',\n                xaxis       :\n                {\n                    title: 'Hours since ' + new Date(archiveList[0].device.stopDate).toLocaleString(),\n                },\n                yaxis:\n                {\n                    title           : plotConfig.trace1Title,\n                    titlefont       : {color: plotConfig.trace1Color},\n                    tickfont        : {color:plotConfig.trace1Color},\n                    gridcolor       : plotConfig.trace1GridColor,\n                    zerolinecolor   : plotConfig.trace1GridColor,\n                    linecolor       : plotConfig.trace1GridColor,\n                    range: [0, 2]\n    \n                },\n                yaxis2:\n                {\n                    title           : plotConfig.trace2Title,\n                    titlefont       : {color: plotConfig.trace2Color},\n                    tickfont        : {color:plotConfig.trace2Color},\n                    gridcolor       : plotConfig.trace2GridColor,\n                    zerolinecolor   : plotConfig.trace2GridColor,\n                    linecolor       : plotConfig.trace2GridColor,\n                    overlaying: 'y',\n                    side: 'right',\n                    range: [0, 2]\n                },\n                margin: \n                    {\n                        t: 30, //top margin\n    //                    l: 0, //left margin\n    //                    r: 0, //right margin\n    //                    b: 20 //bottom margin\n                    },\n            };\n            this.trace1 = \n            {\n                x: [],\n                y: [],\n                name: plotConfig.trace1Title,\n                yaxis: 'y1',\n                type: 'scatter',\n                mode: 'lines',\n                line: {color: this.plotConfig.trace1Color}\n        \n            };\n            this.trace2 = \n            {\n                x: [],\n                y: [],\n                name: plotConfig.trace2Title,\n                yaxis: 'y2',\n                type: 'scatter',\n                mode: 'lines',\n                line: {color: this.plotConfig.trace2Color}\n        \n            };\n            for (var ii = 0; ii < archiveList[0].trace.length; ++ii)\n            {\n                var x = (archiveList[0].trace[ii].timeStamp - archiveList[0].device.stopDate) / 3600000.0;\n                trace1.x[ii] = x;\n                trace1.y[ii] = archiveList[0].trace[ii][archiveList[0].device.attr[0]] ;\n                trace2.x[ii] = x;\n                trace2.y[ii] = archiveList[0].trace[ii][archiveList[0].device.attr[1]];\n            }\n\n\n            Plotly.newPlot('archiveChart', [trace1,trace2], layout);\n            $('#archive2hrButton').attr(\"disabled\", false); \n            $('#archive4hrButton').attr(\"disabled\", false); \n            $('#archive8hrButton').attr(\"disabled\", false); \n            $('#archive24hrButton').attr(\"disabled\", false); \n            $('#archive72hrButton').attr(\"disabled\", false); \n            $('#archive168hrButton').attr(\"disabled\", false); \n        }\n",
+        "output": "str",
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "acd6c73d.c42048"
+            ]
+        ]
+    },
+    {
+        "id": "1addfc5d.361a04",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "script.dangerZone",
+        "field": "payload.script.dangerZone",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// dangerZone JavaScript\n        function restartTray()\n        {\n            optionDialog('Danger! Will Robinson, Danger!', 'Restart Tray', 'This should not be done lightly', ['Reset Tray','Cancel'], [function (){restartTrayButtonPress();}, function (){$( \"#optionDialog\" ).dialog( \"close\" );}]);\n        }\n        function restartTrayButtonPress()\n        {\n            $( \"#optionDialog\" ).dialog( \"close\" );\n            var mqttMessage = \n            {\n                topic   : restfulDevice.project + '/' +  restfulDevice.deviceType + '/' +  restfulDevice.name + '/restartTray',\n                payload :  1\n            };\n            checkLogin(sendSettingToMqtt, mqttMessage);\n        }\n",
+        "output": "str",
+        "x": 670,
+        "y": 300,
+        "wires": [
+            [
+                "8da7689a.45d7e8"
+            ]
+        ]
+    },
+    {
+        "id": "7d2f899e.f4e8b8",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "html.dangerZone",
+        "field": "payload.html.dangerZone",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "                <div class='danger-card'>\n                    <div class='row'>\n                        <div class='col-md-2'>\n                        </div>\n                        <div class='col-md-8'>\n                            <p class='danger-card-title'>Danger Zone</p>\n                         </div>\n                        <div class='col-md-2'>\n                        </div>\n                    </div>\n                    <div class='danger-card-body' align=\"center\">\n                        <div class='row'>\n                            <table width='100%'>\n                                <tr>\n                                    <td width='100%' align=\"center\">\n                                        <button class='btn danger-card-button big-text' id=\"restartTrayButton\" onclick=\"restartTray()\" >Restart Tray</button>\n                                    </td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n",
+        "output": "str",
+        "x": 990,
+        "y": 220,
+        "wires": [
+            [
+                "c47b99ca.4fd248"
+            ]
+        ]
+    },
+    {
+        "id": "75afce25.45603",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "script.toggleButtons",
+        "field": "payload.script.toggleButtons",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "        function powerOn()\n        {\n            if (device.powerOn.value > 0)\n            {\n                device.powerOn.value = 0;\n            }\n            else\n            {\n                device.powerOn.value = 1;\n                \n            }\n            $('#ledOnButtonId').css('color', 'black'); \n            $('#ledOnButtonId').css('background-color', 'grey'); \n            $('#ledOnButtonId').text('?'); \n            var mqttMessage = \n            {\n                topic   : mqttDevice.project + '/' +  mqttDevice.deviceType + '/' +  mqttDevice.name + '/setting',\n                payload :  device\n            };\n            checkLogin(sendSettingToMqtt, mqttMessage);\n        }\n",
+        "output": "str",
+        "x": 670,
+        "y": 180,
+        "wires": [
+            [
+                "a8cb20eb.3b77d"
+            ]
+        ]
+    },
+    {
+        "id": "fb8a47e6.187db8",
+        "type": "template",
+        "z": "24b13e4e.bf0d72",
+        "name": "navBarIcon",
+        "field": "payload.navBarIcon",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "yellowSwitch.png",
+        "output": "str",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "a2ee1729.ede6a8"
+            ]
+        ]
+    },
+    {
+        "id": "8c5e9e8.bd6576",
+        "type": "websocket in",
+        "z": "3f2da72f.995ab8",
+        "name": "/off-n-on/websocket",
+        "server": "a8623046.22b66",
+        "client": "",
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "a0b110ec.a2508"
+            ]
+        ]
+    },
+    {
+        "id": "51b3d752.1fcbe8",
+        "type": "subflow:6a402d92.12d7c4",
+        "z": "24b13e4e.bf0d72",
+        "name": "",
+        "x": 1230,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2c26707b.3a1b5",
+        "type": "mqtt out",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Publish Readings",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "broker": "79250bf3.365cc4",
+        "x": 1030,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7aa86895.758f78",
+        "type": "mqtt in",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Subscribe Settings",
+        "topic": "+/+/+/setting",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "79250bf3.365cc4",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "68ace87c.dd0aa8"
+            ]
+        ]
+    },
+    {
+        "id": "68ace87c.dd0aa8",
+        "type": "json",
+        "z": "1cf61b7d.fa61f5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "c23f60d6.ea0eb"
+            ]
+        ]
+    },
+    {
+        "id": "6b0d28f2.a834d8",
+        "type": "file",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Init Settings",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1070,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4cd4f8f.14504",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "CreateSettings",
+        "func": "var device = flow.get('device');\n//node.warn('newSetting = ' + flow.get('newSetting').toString())\n\nvar bufsize = 24;\nvar buffer = new ArrayBuffer(bufsize);\nvar settingsView = new DataView(buffer);\nsettingsView.setInt32(0, flow.get('newSetting'), true);\nsettingsView.setInt32(4, device.powerOn.value, true);\nsettingsView.setFloat32(8, device.nsamples.value, true);\nsettingsView.setFloat32(12, device.avgRmsOffset.value, true);\nsettingsView.setFloat32(16, device.adcTomA.value, true);\nsettingsView.setInt32(20, device.loopDelay.value, true);\n\nreturn {topic:'settings',payload:Buffer.from(buffer)};\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "93010585.58e1c8"
+            ]
+        ]
+    },
+    {
+        "id": "59c4ddec.b015a4",
+        "type": "inject",
+        "z": "1cf61b7d.fa61f5",
+        "name": "init 1 sec",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "a5874f9e.52e1"
+            ]
+        ]
+    },
+    {
+        "id": "f7bdd8d5.704a68",
+        "type": "file in",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Init Settings",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [
+                "89ac8e50.220c5"
+            ]
+        ]
+    },
+    {
+        "id": "89ac8e50.220c5",
+        "type": "json",
+        "z": "1cf61b7d.fa61f5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "68394c2c.e811e4"
+            ]
+        ]
+    },
+    {
+        "id": "68394c2c.e811e4",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Save initSettings in Memory",
+        "func": "flow.set('device', msg.payload);\nflow.set('newSetting', 1);\nreturn null;",
+        "outputs": 0,
+        "noerr": 0,
+        "x": 880,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "eab9ce16.6e3f7",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Read Serial Handshake",
+        "func": "var ib;\nvar device = flow.get('device');\nvar dataView     = new DataView(new ArrayBuffer(4));\nvar newSettingDone = 0;\nvar cubeInit = 0;\n\nfor (ib = 0; ib < 4; ++ib)   dataView.setUint8(ib, msg.payload[0 * 4 + 3 - ib]);\ncubeInit = dataView.getInt32(0);\nfor (ib = 0; ib < 4; ++ib)   dataView.setUint8(ib, msg.payload[1 * 4 + 3 - ib]);\nnewSettingDone = dataView.getInt32(0);\n\nvar newMsg = {topic:'userData', payload:[]};\nfor (var ii = 8; ii < msg.payload.length; ++ii) newMsg.payload[ii - 8] = msg.payload[ii];\n\nif (newSettingDone > 0) \n{\n    flow.set('newSetting', 0);\n}\nif(cubeInit == 1) flow.set('newSetting', 1);\n//node.warn('newSettingDone = ' + newSettingDone.toString());\n//node.warn('cubeInit = ' + cubeInit.toString());\n\nreturn newMsg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "810796b.e880968",
+                "c4cd4f8f.14504"
+            ]
+        ]
+    },
+    {
+        "id": "47f6f38b.a46a9c",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Make Pretty",
+        "func": "var jsonPretty = JSON.stringify(msg.payload,null,2);\nvar filename = flow.get('cubeInfo').deviceType + '-' + flow.get('cubeInfo').name + '.json';\nreturn {topic: msg.payload, payload:jsonPretty, 'filename':filename};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 890,
+        "y": 160,
+        "wires": [
+            [
+                "6b0d28f2.a834d8"
+            ]
+        ]
+    },
+    {
+        "id": "68a6738c.698acc",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Settings Alarm Scan",
+        "func": "scalarAlarmScan(msg.payload, 'setting');\nflow.set('device', msg.payload); \nflow.set('newSetting', 1); \nreturn msg;\n\nfunction getActionArray(device, type, actionType)\n{\n    var actionArray = [];\n    var keys = Object.keys(device);\n    for (var ii = 0; ii < keys.length; ++ii)\n    {\n        if (device[keys[ii]].hasOwnProperty('type'))\n        {\n            if (device[keys[ii]].type == type)\n            {\n                if (device[keys[ii]].action == actionType)\n                {\n                    actionArray.push(device[keys[ii]]);\n                }\n            }\n        }\n    }\n    return actionArray;\n}\nfunction scalarAlarmScan(device, actionType)\n{\n    var actionArray = getActionArray(device, 'scalar', actionType);\n    if (actionArray.length > 0)\n    {\n        for (var ii = 0; ii < actionArray.length; ++ii)\n        {\n            actionArray[ii].alarm.value = 0;\n            if (!isNaN(actionArray[ii].value))\n            {\n                if (actionArray[ii].value < actionArray[ii].alarm.limits.low)  actionArray[ii].alarm.value = 1;\n                if (actionArray[ii].value < actionArray[ii].alarm.limits.lolo) actionArray[ii].alarm.value = 3;\n                if (actionArray[ii].value > actionArray[ii].alarm.limits.high) actionArray[ii].alarm.value = 2;\n                if (actionArray[ii].value > actionArray[ii].alarm.limits.hihi) actionArray[ii].alarm.value = 4;\n            }\n        }\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "47f6f38b.a46a9c"
+            ]
+        ]
+    },
+    {
+        "id": "9043dd7e.9651b",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Readings Alarm Scan",
+        "func": "msg.payload.linkQuality.value     = global.get('linkQuality');\nmsg.payload.signalLevel.value     = global.get('signalLevel');\nscalarAlarmScan(msg.payload, 'reading');\nflow.set('device', msg.payload); \nmsg.topic = global.get('project') + '/' + flow.get('cubeInfo').deviceType + '/' + flow.get('cubeInfo').name + '/reading';\nreturn msg;\n\nfunction getActionArray(device, type, actionType)\n{\n    var actionArray = [];\n    var keys = Object.keys(device);\n    for (var ii = 0; ii < keys.length; ++ii)\n    {\n        if (device[keys[ii]].hasOwnProperty('type'))\n        {\n            if (device[keys[ii]].type == type)\n            {\n                if (device[keys[ii]].action == actionType)\n                {\n                    actionArray.push(device[keys[ii]]);\n                }\n            }\n        }\n    }\n    return actionArray;\n}\nfunction scalarAlarmScan(device, actionType)\n{\n    var actionArray = getActionArray(device, 'scalar', actionType);\n    if (actionArray.length > 0)\n    {\n        for (var ii = 0; ii < actionArray.length; ++ii)\n        {\n            actionArray[ii].alarm.value = 0;\n            if (!isNaN(actionArray[ii].value))\n            {\n                if (actionArray[ii].value < actionArray[ii].alarm.limits.low)  actionArray[ii].alarm.value = 1;\n                if (actionArray[ii].value < actionArray[ii].alarm.limits.lolo) actionArray[ii].alarm.value = 3;\n                if (actionArray[ii].value > actionArray[ii].alarm.limits.high) actionArray[ii].alarm.value = 2;\n                if (actionArray[ii].value > actionArray[ii].alarm.limits.hihi) actionArray[ii].alarm.value = 4;\n            }\n        }\n    }\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 800,
+        "y": 420,
+        "wires": [
+            [
+                "26472f3e.f9b36",
+                "2c26707b.3a1b5"
+            ]
+        ]
+    },
+    {
+        "id": "290b53a4.b3f6ac",
+        "type": "link in",
+        "z": "1cf61b7d.fa61f5",
+        "name": "off-n-on-cube-01 Settings In",
+        "links": [
+            "7c4b2549.34d35c"
+        ],
+        "x": 55,
+        "y": 220,
+        "wires": [
+            [
+                "506fa046.2a998"
+            ]
+        ]
+    },
+    {
+        "id": "26472f3e.f9b36",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Split MQTT topic",
+        "func": "var mqttArray = msg.topic.split('/');\nvar device = \n{\n    project     : mqttArray[0],\n    deviceType  : mqttArray[1],\n    name        : mqttArray[2],\n    prop        : mqttArray[3],\n};\nreturn {topic : msg.topic, payload:{topic:'readings', mqttDevice : device, payload:msg.payload}};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1030,
+        "y": 480,
+        "wires": [
+            [
+                "ec06e04.0969f2"
+            ]
+        ]
+    },
+    {
+        "id": "ec06e04.0969f2",
+        "type": "websocket out",
+        "z": "1cf61b7d.fa61f5",
+        "name": "/off-n-on/websocket",
+        "server": "a8623046.22b66",
+        "client": "",
+        "x": 1250,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ebca6f86.aeab8",
+        "type": "link in",
+        "z": "1cf61b7d.fa61f5",
+        "name": "off-n-on-cube-01 to websocket",
+        "links": [
+            "85ace946.bd0208"
+        ],
+        "x": 1135,
+        "y": 520,
+        "wires": [
+            [
+                "ec06e04.0969f2"
+            ]
+        ]
+    },
+    {
+        "id": "2c149f93.11c4b",
+        "type": "exec",
+        "z": "1cf61b7d.fa61f5",
+        "command": "pm2 restart red",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 1020,
+        "y": 280,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f21f6a6b.91d3c8",
+        "type": "mqtt in",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Restart Tray",
+        "topic": "+/+/+/restartTray",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "79250bf3.365cc4",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "9fd5d284.1cbab"
+            ]
+        ]
+    },
+    {
+        "id": "9fd5d284.1cbab",
+        "type": "json",
+        "z": "1cf61b7d.fa61f5",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "52390a6b.aff484"
+            ]
+        ]
+    },
+    {
+        "id": "ed07cf01.ad7a8",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Check Restart Setting",
+        "func": "if (msg.payload != 1) return null\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "2c149f93.11c4b"
+            ]
+        ]
+    },
+    {
+        "id": "506fa046.2a998",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Filter Websocket MQTT like message",
+        "func": "var msg1 = null;\nvar msg2 = null\nvar mqttArray = msg.topic.split('/');\nif (mqttArray[3] == 'restartTray')\n{\n    msg2 = msg;\n}\nelse\n{\n    msg1 = msg;\n}\n\nreturn [msg1,msg2];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "c23f60d6.ea0eb"
+            ],
+            [
+                "52390a6b.aff484"
+            ]
+        ]
+    },
+    {
+        "id": "810796b.e880968",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Create Readings",
+        "func": "var ib;\nvar device = flow.get('device');\nvar dataView     = new DataView(new ArrayBuffer(4));\n\nfor (ib = 0; ib < 4; ++ib)   dataView.setUint8(ib, msg.payload[0 * 4 + 3 - ib]);\ndevice.avgRms.value = dataView.getFloat32(0);\nfor (ib = 0; ib < 4; ++ib)   dataView.setUint8(ib, msg.payload[1 * 4 + 3 - ib]);\ndevice.milliAmps.value = dataView.getFloat32(0);\nfor (ib = 0; ib < 4; ++ib)   dataView.setUint8(ib, msg.payload[2 * 4 + 3 - ib]);\ndevice.power.value = dataView.getFloat32(0);\nfor (ib = 0; ib < 4; ++ib)   dataView.setUint8(ib, msg.payload[3 * 4 + 3 - ib]);\ndevice.adcSampleRate.value = dataView.getFloat32(0);\n\ndevice.avgRms.value = Math.round(100.0 * device.avgRms.value) / 100.0;\ndevice.milliAmps.value = Math.round(100.0 * device.milliAmps.value) / 100.0;\ndevice.power.value = Math.round(100.0 * device.power.value) / 100.0;\ndevice.adcSampleRate.value = Math.round(100.0 * device.adcSampleRate.value) / 100.0;\n\nreturn {topic : 'reading', payload : device};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "9043dd7e.9651b"
+            ]
+        ]
+    },
+    {
+        "id": "4c5f2ba.6f495d4",
+        "type": "comment",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Customization",
+        "info": " - Buffer size on Teensy Output\n - rfcomm port\n - code in Create Readings\n - code in Create Settings\n - websocket URL",
+        "x": 650,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "679512d7.19a9bc",
+        "type": "inject",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Init",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "cee5ce0.702ba3"
+            ]
+        ]
+    },
+    {
+        "id": "cee5ce0.702ba3",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Cube Custom Info",
+        "func": "var cubeInfo = \n{\n    deviceType  : 'off-n-on',\n    name        : '01',\n};\nflow.set('cubeInfo', cubeInfo);\nreturn null;",
+        "outputs": 0,
+        "noerr": 0,
+        "x": 390,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a5874f9e.52e1",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Make Pretty",
+        "func": "var filename = flow.get('cubeInfo').deviceType + '-' + flow.get('cubeInfo').name + '.json';\nreturn {topic: 'readFile', 'filename':filename};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 360,
+        "wires": [
+            [
+                "f7bdd8d5.704a68"
+            ]
+        ]
+    },
+    {
+        "id": "c23f60d6.ea0eb",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Filter MQTT",
+        "func": "var mqttArray = msg.topic.split('/');\nif (mqttArray[0] != global.get('project')) return null;\nif (mqttArray[1] != flow.get('cubeInfo').deviceType) return null;\nif (mqttArray[2] != flow.get('cubeInfo').name) return null;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "68a6738c.698acc"
+            ]
+        ]
+    },
+    {
+        "id": "52390a6b.aff484",
+        "type": "function",
+        "z": "1cf61b7d.fa61f5",
+        "name": "Filter MQTT",
+        "func": "var mqttArray = msg.topic.split('/');\nif (mqttArray[0] != global.get('project')) return null;\nif (mqttArray[1] != flow.get('cubeInfo').deviceType) return null;\nif (mqttArray[2] != flow.get('cubeInfo').name) return null;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "ed07cf01.ad7a8"
+            ]
+        ]
+    },
+    {
+        "id": "a6250ac6.7d6bf8",
+        "type": "serial in",
+        "z": "1cf61b7d.fa61f5",
+        "name": "",
+        "serial": "3ad4d5a9.d870ba",
+        "x": 110,
+        "y": 420,
+        "wires": [
+            [
+                "eab9ce16.6e3f7"
+            ]
+        ]
+    },
+    {
+        "id": "93010585.58e1c8",
+        "type": "serial out",
+        "z": "1cf61b7d.fa61f5",
+        "name": "",
+        "serial": "3ad4d5a9.d870ba",
+        "x": 740,
         "y": 480,
         "wires": []
     }
